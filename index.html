@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FTG Learning | Kế hoạch tri ân giảng viên 20/11/2026</title>
+<style>
+  :root{
+    --navy:#12334b; --blue:#176b87; --orange:#e87932; --orange-light:#fff0e5;
+    --ink:#233746; --muted:#667987; --line:#dce5ea; --bg:#f3f6f8; --white:#fff;
+    --green:#28745b; --green-light:#e8f5ef;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55}
+  .page{max-width:1180px;margin:28px auto;padding:0 22px 40px}
+  .hero{background:linear-gradient(125deg,#102f46 0%,#174b66 70%,#176b87 100%);color:white;border-radius:22px;padding:34px 38px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;width:280px;height:280px;border:42px solid rgba(255,255,255,.07);border-radius:50%;right:-65px;top:-105px}
+  .eyebrow{font-size:12px;letter-spacing:2px;font-weight:700;color:#ffc18f;text-transform:uppercase}
+  h1{font-size:clamp(30px,4vw,48px);line-height:1.08;margin:12px 0 8px;letter-spacing:.4px}
+  .subtitle{font-size:19px;color:#ffd0ac;font-weight:700;margin:0 0 14px}
+  .hero p{max-width:760px;color:#edf4f7;margin:0}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .pill{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);border-radius:999px;padding:7px 12px;font-size:12px}
+  .section{margin-top:25px}
+  .section-head{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:13px}
+  h2{font-size:23px;color:var(--navy);margin:0;line-height:1.25}
+  .section-kicker{font-size:11px;font-weight:700;color:var(--orange);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px}
+  .section-note{color:var(--muted);font-size:13px}
+  .grid{display:grid;gap:14px}
+  .metrics{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .metric,.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:19px;box-shadow:0 3px 12px rgba(18,51,75,.035)}
+  .metric .label{font-size:12px;color:var(--muted);font-weight:700}
+  .metric .value{font-size:27px;color:var(--navy);font-weight:800;margin:5px 0 3px}
+  .metric .desc{font-size:12px;color:var(--muted)}
+  .concept-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .activity{padding:0;overflow:hidden}
+  .activity-top{padding:18px 19px 15px;background:linear-gradient(135deg,#fff7f1,#fff)}
+  .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:11px;background:var(--orange-light);color:#b8561e;font-weight:800;margin-bottom:10px}
+  h3{font-size:17px;color:var(--navy);margin:0 0 5px;line-height:1.35}
+  .tag{display:inline-block;font-size:10px;letter-spacing:.7px;text-transform:uppercase;font-weight:800;color:var(--blue);background:#eaf5f8;padding:5px 8px;border-radius:6px;margin:5px 0 0}
+  .activity-body{padding:16px 19px 19px}
+  .activity-body p{font-size:13px;margin:0 0 10px;color:#455b69}
+  ul{padding-left:18px;margin:8px 0}
+  li{margin:5px 0;font-size:13px}
+  .deliverable{border-top:1px solid var(--line);margin-top:13px;padding-top:12px;font-size:12px;color:var(--green);font-weight:700}
+  .two-col{grid-template-columns:1.12fr .88fr}
+  .timeline{position:relative;margin-top:4px}
+  .timeline-row{display:grid;grid-template-columns:112px 18px 1fr;gap:11px;padding:10px 0}
+  .timeline-date{font-size:12px;font-weight:800;color:var(--blue);padding-top:2px}
+  .timeline-dot{width:11px;height:11px;border-radius:50%;background:var(--orange);margin-top:5px;position:relative}
+  .timeline-dot:after{content:"";position:absolute;top:12px;left:5px;width:1px;height:calc(100% + 25px);background:#d7e2e8}
+  .timeline-row:last-child .timeline-dot:after{display:none}
+  .timeline-title{font-size:13px;font-weight:800;color:var(--navy)}
+  .timeline-desc{font-size:12px;color:var(--muted);margin-top:2px}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th{text-align:left;background:#eef4f7;color:var(--navy);font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+  th,td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  .budget-total{background:var(--navy);color:white;border-radius:13px;padding:17px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px}
+  .budget-total strong{font-size:27px;white-space:nowrap}
+  .budget-total span{font-size:12px;color:#dce9ef}
+  .budget-note{background:#fff7ed;border-left:4px solid var(--orange);padding:12px 14px;border-radius:7px;font-size:12px;color:#73533c;margin-top:12px}
+  .kpi-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .kpi{border-left:4px solid var(--orange)}
+  .kpi .big{font-size:24px;font-weight:800;color:var(--navy);margin:2px 0}
+  .kpi p{font-size:12px;color:var(--muted);margin:0}
+  .checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .check{display:flex;gap:10px;padding:12px;background:#f8fafb;border:1px solid var(--line);border-radius:10px;font-size:13px}
+  .check b{color:var(--orange)}
+  .footer{margin-top:24px;background:#e8eef2;border-radius:14px;padding:16px 19px;color:#536976;font-size:12px}
+  .footer strong{color:var(--navy)}
+  .small{font-size:11px;color:var(--muted)}
+  @media(max-width:850px){.metrics{grid-template-columns:repeat(2,1fr)}.concept-grid,.two-col{grid-template-columns:1fr}.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.page{padding:0 12px 24px;margin:12px auto}.hero{padding:25px 22px}.metrics,.kpi-grid,.checklist{grid-template-columns:1fr}.timeline-row{grid-template-columns:88px 14px 1fr}.budget-total{align-items:flex-start;flex-direction:column}}
+  @media print{body{background:white}.page{margin:0 auto;padding:0 8px}.hero,.budget-total{print-color-adjust:exact;-webkit-print-color-adjust:exact}.metric,.card{box-shadow:none;break-inside:avoid}.section{break-inside:avoid}.hero{border-radius:10px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <div class="eyebrow">FTG Learning · Internal Trainer Appreciation</div>
+    <h1>BEYOND THE LESSON</h1>
+    <div class="subtitle">HƠN CẢ MỘT BÀI GIẢNG</div>
+    <p>Một bài giảng có thể kết thúc. Giá trị được trao đi sẽ tiếp tục lan tỏa.</p>
+    <div class="hero-meta">
+      <span class="pill">20/11/2026 · Thứ Sáu</span>
+      <span class="pill">Đối tượng: Giảng viên nội bộ FTG</span>
+      <span class="pill">Hình thức: Online + Offline</span>
+      <span class="pill">Định hướng: Ghi nhận · Kết nối · Lan tỏa</span>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">01 / Executive overview</div><h2>Tổng quan kế hoạch</h2></div>
+      <div class="section-note">Bản kế hoạch đề xuất · 21/10/2026</div>
+    </div>
+    <div class="grid metrics">
+      <div class="metric"><div class="label">ĐỐI TƯỢNG TRI ÂN</div><div class="value">20</div><div class="desc">Giảng viên nội bộ dự kiến</div></div>
+      <div class="metric"><div class="label">NGÂN SÁCH QUÀ</div><div class="value">6.000.000đ</div><div class="desc">300.000đ × 20 giảng viên</div></div>
+      <div class="metric"><div class="label">HOẠT ĐỘNG CHÍNH</div><div class="value">03</div><div class="desc">Tri ân số · Cá nhân hóa · Gặp mặt</div></div>
+      <div class="metric"><div class="label">THỜI GIAN TRIỂN KHAI</div><div class="value">4 tuần</div><div class="desc">26/10–25/11/2026</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">02 / Purpose &amp; message</div><h2>Mục tiêu & thông điệp</h2></div>
+    </div>
+    <div class="grid two-col">
+      <div class="card">
+        <h3>Mục tiêu chương trình</h3>
+        <ul>
+          <li>Tri ân và ghi nhận đóng góp của đội ngũ giảng viên nội bộ FTG.</li>
+          <li>Cho giảng viên thấy tác động thực tế của kiến thức, kinh nghiệm đã chia sẻ.</li>
+          <li>Khuyến khích văn hóa chia sẻ tri thức, học tập và phát triển trong FTG.</li>
+          <li>Tăng sự gắn kết giữa giảng viên, học viên và cộng đồng FTG Learning.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Nguyên tắc thiết kế</h3>
+        <ul>
+          <li><b>Cá nhân hóa:</b> mỗi giảng viên nhận lời cảm ơn có ý nghĩa riêng.</li>
+          <li><b>Thực chất:</b> ưu tiên câu chuyện về kiến thức/kỹ năng đã áp dụng.</li>
+          <li><b>Tối ưu chi phí:</b> tận dụng kênh truyền thông và nguồn lực nội bộ.</li>
+          <li><b>Không cạnh tranh:</b> ghi nhận đa dạng, không xếp hạng giảng viên.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">03 / Signature activities</div><h2>Ba hoạt động chủ đạo</h2></div>
+      <div class="section-note">Kết nối online và offline thành một hành trình thống nhất</div>
+    </div>
+    <div class="grid concept-grid">
+      <article class="card activity">
+        <div class="activity-top"><div class="num">01</div><h3>THE IMPACT WALL</h3><div><b>Bức tường tri ân</b></div><span class="tag">ONLINE · 06–13/11</span></div>
+        <div class="activity-body">
+          <p>Phát động để CBNV gửi lời cảm ơn và chia sẻ dấu ấn từ những buổi học.</p>
+          <ul>
+            <li>Điều giá trị nhất đã học được.</li>
+            <li>Kiến thức/kỹ năng đã áp dụng vào công việc.</li>
+            <li>Lời nhắn muốn gửi đến giảng viên.</li>
+          </ul>
+          <div class="deliverable">Đầu ra: Bức tường tri ân số / album lời nhắn</div>
+        </div>
+      </article>
+      <article class="card activity">
+        <div class="activity-top"><div class="num">02</div><h3>A NOTE FOR YOU</h3><div><b>Gửi người truyền cảm hứng</b></div><span class="tag">ONLINE + OFFLINE · 16–20/11</span></div>
+        <div class="activity-body">
+          <p>Cá nhân hóa lời tri ân để mỗi giảng viên cảm nhận được sự ghi nhận dành riêng cho mình.</p>
+          <ul>
+            <li>Thiệp cảm ơn có tên giảng viên.</li>
+            <li>Trích dẫn một chia sẻ thực tế từ học viên.</li>
+            <li>Quà tặng tri ân trị giá 300.000đ/người.</li>
+          </ul>
+          <div class="deliverable">Đầu ra: 20 bộ quà + thiệp cá nhân hóa</div>
+        </div>
+      </article>
+      <article class="card activity">
+        <div class="activity-top"><div class="num">03</div><h3>MOMENTS THAT MATTER</h3><div><b>Khoảnh khắc tri ân</b></div><span class="tag">OFFLINE + ONLINE · 20/11</span></div>
+        <div class="activity-body">
+          <p>Tổ chức buổi gặp mặt ngắn, lấy câu chuyện của học viên làm trung tâm.</p>
+          <ul>
+            <li>Chiếu album/video lời cảm ơn.</li>
+            <li>Đại diện lãnh đạo gửi lời tri ân.</li>
+            <li>Trao quà, chia sẻ ngắn và chụp ảnh tập thể.</li>
+            <li>Đăng bài tổng kết cho CBNV toàn FTG.</li>
+          </ul>
+          <div class="deliverable">Đầu ra: Buổi tri ân + bài truyền thông tổng kết</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">04 / Implementation plan</div><h2>Timeline triển khai</h2></div>
+    </div>
+    <div class="grid two-col">
+      <div class="card timeline">
+        <div class="timeline-row"><div class="timeline-date">26–30/10</div><div class="timeline-dot"></div><div><div class="timeline-title">Chốt kế hoạch & danh sách</div><div class="timeline-desc">Xác nhận 20 giảng viên, ngân sách, PIC và phê duyệt.</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">02–05/11</div><div class="timeline-dot"></div><div><div class="timeline-title">Chuẩn bị chiến dịch</div><div class="timeline-desc">Hoàn thiện key visual, form tri ân, thông điệp và kịch bản.</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">06–13/11</div><div class="timeline-dot"></div><div><div class="timeline-title">Phát động The Impact Wall</div><div class="timeline-desc">Gửi thông báo, lan tỏa qua đầu mối đơn vị, thu thập lời nhắn.</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">09–13/11</div><div class="timeline-dot"></div><div><div class="timeline-title">Đặt quà tặng</div><div class="timeline-desc">Chọn nhà cung cấp, đặt 20 phần quà; dự phòng phương án giao trễ.</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">16–18/11</div><div class="timeline-dot"></div><div><div class="timeline-title">Hoàn thiện nội dung tri ân</div><div class="timeline-desc">Chọn lời nhắn, thiết kế/in thiệp, tổng hợp album hoặc video.</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">19/11</div><div class="timeline-dot"></div><div><div class="timeline-title">Tổng duyệt</div><div class="timeline-desc">Kiểm tra quà, danh sách, địa điểm, thiết bị và phân công.</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">20/11</div><div class="timeline-dot"></div><div><div class="timeline-title">Ngày tri ân</div><div class="timeline-desc">Gặp mặt, trao quà, chụp ảnh và đăng bài truyền thông.</div></div></div>
+        <div class="timeline-row"><div class="timeline-date">23–25/11</div><div class="timeline-dot"></div><div><div class="timeline-title">Tổng kết & báo cáo</div><div class="timeline-desc">Chốt KPI, chi phí thực tế, phản hồi và bài học kinh nghiệm.</div></div></div>
+      </div>
+      <div class="card">
+        <h3>Các mốc cần khóa</h3>
+        <table>
+          <thead><tr><th>Mốc</th><th>Điều kiện hoàn thành</th></tr></thead>
+          <tbody>
+            <tr><td><b>30/10</b></td><td>Danh sách giảng viên và ngân sách được xác nhận.</td></tr>
+            <tr><td><b>05/11</b></td><td>Form tri ân, key visual và thông điệp sẵn sàng.</td></tr>
+            <tr><td><b>13/11</b></td><td>Đã thu thập đủ nội dung để biên tập, thiết kế.</td></tr>
+            <tr><td><b>18/11</b></td><td>Quà/thiệp và nội dung truyền thông hoàn thiện.</td></tr>
+            <tr><td><b>19/11</b></td><td>Địa điểm, kịch bản và đầu mối đã xác nhận.</td></tr>
+          </tbody>
+        </table>
+        <div class="budget-note"><b>Lưu ý vận hành:</b> Với giảng viên ở nhiều địa điểm, thống nhất một bộ nhận diện và nội dung chung; phân công đầu mối giao quà tại từng văn phòng. Xin phép trước khi công khai tên, hình ảnh hoặc trích dẫn lời nhắn.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">05 / Ownership</div><h2>Phân công PIC</h2></div>
+    </div>
+    <div class="card">
+      <table>
+        <thead><tr><th>Đơn vị / PIC</th><th>Trách nhiệm</th><th>Đầu ra</th></tr></thead>
+        <tbody>
+          <tr><td><b>HR/L&D – Program Owner</b></td><td>Chủ trì kế hoạch, ngân sách, timeline, điều phối và tổng kết.</td><td>Kế hoạch tổng thể, báo cáo KPI.</td></tr>
+          <tr><td><b>HR/L&D – Communication</b></td><td>Viết thông điệp, thiết kế nội dung, quản lý form và bức tường tri ân.</td><td>Key visual, form, album/bài viết.</td></tr>
+          <tr><td><b>HR/Admin – Logistics</b></td><td>Mua quà, in thiệp, chuẩn bị địa điểm, nước uống và hậu cần.</td><td>20 bộ quà, không gian sự kiện.</td></tr>
+          <tr><td><b>Đầu mối các đơn vị</b></td><td>Xác nhận danh sách, lan tỏa hoạt động và khuyến khích học viên tham gia.</td><td>Danh sách chính xác, lời nhắn.</td></tr>
+          <tr><td><b>Đại diện lãnh đạo FTG</b></td><td>Gửi lời tri ân và tham dự khoảnh khắc ghi nhận.</td><td>Thông điệp tri ân.</td></tr>
+          <tr><td><b>Giảng viên & học viên</b></td><td>Đóng góp câu chuyện, lời cảm ơn và tham gia hoạt động.</td><td>Nội dung chia sẻ thực tế.</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Có thể gộp vai trò Program Owner và Communication cho HR/L&D nếu nguồn lực hạn chế. Đơn vị chỉ cần một đầu mối phối hợp.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">06 / Budget</div><h2>Dự toán ngân sách</h2></div>
+      <div class="section-note">Theo khoản chi đã xác định</div>
+    </div>
+    <div class="grid two-col">
+      <div class="card">
+        <div class="budget-total"><div><span>NGÂN SÁCH QUÀ TẶNG</span><br><b>20 giảng viên</b></div><strong>6.000.000đ</strong></div>
+        <table>
+          <thead><tr><th>Hạng mục</th><th>Đơn giá</th><th>SL</th><th>Thành tiền</th></tr></thead>
+          <tbody>
+            <tr><td>Quà tri ân giảng viên</td><td>300.000đ</td><td>20</td><td><b>6.000.000đ</b></td></tr>
+            <tr><td colspan="3"><b>TỔNG NGÂN SÁCH ĐÃ XÁC ĐỊNH</b></td><td><b>6.000.000đ</b></td></tr>
+          </tbody>
+        </table>
+        <div class="budget-note"><b>Phạm vi ngân sách:</b> Hiện chỉ xác định khoản quà tặng 300.000đ × 20 người. Chưa bao gồm các khoản chi khác.</div>
+      </div>
+      <div class="card">
+        <h3>Nguyên tắc tối ưu chi phí</h3>
+        <ul>
+          <li><b>Quà tặng:</b> ưu tiên món quà hữu ích, đồng bộ, có thể kèm thiệp cá nhân hóa.</li>
+          <li><b>Truyền thông:</b> dùng kênh nội bộ, công cụ thiết kế và form sẵn có.</li>
+          <li><b>Buổi gặp mặt:</b> ưu tiên phòng họp/văn phòng hiện hữu, thiết bị sẵn có và kịch bản 30–45 phút.</li>
+          <li><b>In ấn/tea break/trang trí:</b> chỉ thực hiện nếu có nguồn lực hoặc ngân sách được phê duyệt riêng.</li>
+        </ul>
+        <div class="budget-note">Đề xuất chưa phát sinh ngân sách ngoài quà tặng. Nếu cần chi phí tổ chức trực tiếp, HR/L&D sẽ rà soát nguồn lực hiện có và xin phê duyệt bổ sung trước khi thực hiện.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">07 / Success measures</div><h2>KPI đánh giá hiệu quả</h2></div>
+    </div>
+    <div class="grid kpi-grid">
+      <div class="card kpi"><div class="label small">ĐỘ PHỦ TRI ÂN</div><div class="big">100%</div><p>20/20 giảng viên trong danh sách nhận được lời tri ân và quà tặng.</p></div>
+      <div class="card kpi"><div class="label small">MỨC ĐỘ THAM GIA</div><div class="big">≥ 60%</div><p>Tỷ lệ CBNV được truyền thông tham gia gửi lời nhắn.</p></div>
+      <div class="card kpi"><div class="label small">NỘI DUNG TRI ÂN</div><div class="big">≥ 30</div><p>Lời nhắn/câu chuyện hợp lệ được thu thập.</p></div>
+      <div class="card kpi"><div class="label small">CÁ NHÂN HÓA</div><div class="big">20/20</div><p>Mỗi giảng viên có thiệp hoặc lời nhắn được cá nhân hóa.</p></div>
+      <div class="card kpi"><div class="label small">TRUYỀN THÔNG</div><div class="big">≥ 2</div><p>Nội dung chính: bài phát động và bài tổng kết.</p></div>
+      <div class="card kpi"><div class="label small">NGÂN SÁCH</div><div class="big">≤ 6 triệu</div><p>Khoản quà tặng không vượt dự toán được duyệt; chi phí khác cần duyệt riêng.</p></div>
+    </div>
+    <p class="small">Các KPI là mục tiêu đề xuất. Tỷ lệ tham gia tính trên nhóm CBNV được tiếp cận; cần xác định mẫu số trước khi phát động.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="section-kicker">08 / Immediate next steps</div><h2>Checklist khởi động</h2></div>
+    </div>
+    <div class="card checklist">
+      <div class="check"><b>01</b><span>Chốt danh sách 20 giảng viên và địa điểm làm việc.</span></div>
+      <div class="check"><b>02</b><span>Xác nhận ngân sách quà tặng 6.000.000đ và cấp phê duyệt.</span></div>
+      <div class="check"><b>03</b><span>Chọn quà, nhà cung cấp và thời hạn giao hàng.</span></div>
+      <div class="check"><b>04</b><span>Chốt PIC HR/L&D, HR/Admin và đầu mối các đơn vị.</span></div>
+      <div class="check"><b>05</b><span>Duyệt key visual, form tri ân và nội dung phát động.</span></div>
+      <div class="check"><b>06</b><span>Chốt kịch bản 30–45 phút cho hoạt động ngày 20/11.</span></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <strong>Định hướng đề xuất:</strong> Không đặt trọng tâm vào quy mô sự kiện hay giá trị quà tặng; điểm khác biệt là mỗi giảng viên nhìn thấy bằng chứng cụ thể rằng những gì mình chia sẻ đã giúp đồng nghiệp phát triển. Chương trình hướng tới việc biến hoạt động tri ân thành một điểm chạm văn hóa học tập của FTG Learning.<br><br>
+    <span>FTG Learning · BEYOND THE LESSON · Kế hoạch đề xuất để trao đổi và phê duyệt nội bộ.</span>
+  </footer>
+</div>
+</body>
+</html>
